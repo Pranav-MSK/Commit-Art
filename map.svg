@@ -39,7 +39,7 @@
   <g id="row-C">
     <rect id="C1" class="pixel" x="0"   y="80" width="40" height="40" fill="#CCCCCC"/>
     <rect id="C2" class="pixel" x="40"  y="80" width="40" height="40" fill="#CCCCCC"/>
-    <rect id="C3" class="pixel" x="80"  y="80" width="40" height="40" fill="#CCCCCC"/>
+    <rect id="C3" class="pixel" x="80"  y="80" width="40" height="40" fill="#FF0000"/>
     <rect id="C4" class="pixel" x="120" y="80" width="40" height="40" fill="#CCCCCC"/>
     <rect id="C5" class="pixel" x="160" y="80" width="40" height="40" fill="#CCCCCC"/>
     <rect id="C6" class="pixel" x="200" y="80" width="40" height="40" fill="#CCCCCC"/>

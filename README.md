@@ -47,7 +47,7 @@ Examples:
 
 ## 🖼 Live Canvas
 
-![Canvas](map.svg?ts=0)
+![Canvas](map.svg?ts=1772302060)
 
 ---
 
