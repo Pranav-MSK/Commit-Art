@@ -1,20 +1,47 @@
-# 🌍 The Global Rorschach Canvas
+# 🌍 The Global Rorschach Canvas (8×8 Edition)
 
 A slow-motion collaborative art experiment.
 
-## 🎨 How to Paint
+---
 
-1. Click “Issues”
-2. Create a new Issue
-3. Use this format:
+## 🎨 How To Paint
 
+1. Go to the **Issues** tab.
+2. Click **New Issue**.
+3. Use this exact format:
+
+```
 Paint [A5] #FF5733
+```
 
 That’s it.
 
-You may paint once every 24 hours.
+---
 
-Tiles lock for 1 hour after being painted.
+## 📏 Valid Coordinates
+
+Rows: **A–H**  
+Columns: **1–8**
+
+Examples:
+
+- Paint [A1] #FF0000
+- Paint [H8] #00FFAA
+
+---
+
+## ⏳ Rules
+
+- You may paint once per issue.
+- Format must match exactly:
+  
+  `Paint [Coordinate] #HEXCODE`
+
+- Coordinate must be between **A1 and H8**
+- Color must be a valid 6-digit HEX code.
+- Invalid format → issue labeled **Invalid**
+- Successful paint → issue labeled **Completed**
+- Every action is permanently logged.
 
 ---
 
@@ -24,21 +51,10 @@ Tiles lock for 1 hour after being painted.
 
 ---
 
-## 📜 Rules
+## 📜 History Log
 
-- Format must be: `Paint [Coordinate] #HEXCODE`
-- Coordinates range from A1 to P16
-- One paint per user every 24h
-- Tile locks for 1 hour after painting
-- Invalid format → issue labeled `Invalid`
-- History is permanently logged
+All changes are recorded in `history.log`.
 
 ---
 
-## 🔥 Most Contested Pixel
-Coming soon...
-
----
-
-## 🏆 Top Painters
-Coming soon...
+Built entirely with GitHub Actions. No servers. No backend.
