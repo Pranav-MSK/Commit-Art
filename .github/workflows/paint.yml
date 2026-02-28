@@ -1,0 +1,85 @@
+name: Canvas Paint Engine (8x8)
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  paint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Parse Issue Title
+        id: parse
+        run: |
+          TITLE="${{ github.event.issue.title }}"
+          echo "Title: $TITLE"
+
+          # 8x8 VALIDATION
+          if [[ "$TITLE" =~ ^Paint\ \[([A-H][1-8])\]\ \#([A-Fa-f0-9]{6})$ ]]; then
+            COORD=$(echo "$TITLE" | sed -E 's/^Paint \[([A-H][1-8])\].*/\1/')
+            COLOR=$(echo "$TITLE" | sed -E 's/.*(#([A-Fa-f0-9]{6})).*/\1/')
+            echo "coord=$COORD" >> $GITHUB_OUTPUT
+            echo "color=$COLOR" >> $GITHUB_OUTPUT
+          else
+            echo "invalid=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Handle Invalid Format
+        if: steps.parse.outputs.invalid == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} \
+            --body $'❌ Invalid format.\n\nUse exactly:\nPaint [A5] #FF5733\n\nValid coordinates: A1–H8'
+
+          gh issue edit ${{ github.event.issue.number }} --add-label "Invalid"
+
+      - name: Update SVG
+        if: steps.parse.outputs.invalid != 'true'
+        run: |
+          COORD="${{ steps.parse.outputs.coord }}"
+          COLOR="${{ steps.parse.outputs.color }}"
+
+          echo "Painting $COORD with $COLOR"
+
+          sed -i.bak "s/\(id=\"$COORD\"[^>]*fill=\)\"#[A-Fa-f0-9]\{6\}\"/\1\"$COLOR\"/" map.svg
+          rm map.svg.bak
+
+      - name: Append History
+        if: steps.parse.outputs.invalid != 'true'
+        run: |
+          echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ"),${{ github.actor }},${{ steps.parse.outputs.coord }},${{ steps.parse.outputs.color }}" >> history.log
+
+      - name: Update Cache Buster
+        if: steps.parse.outputs.invalid != 'true'
+        run: |
+          TS=$(date +%s)
+          sed -i.bak "s/map\.svg?ts=[0-9]*/map.svg?ts=$TS/" README.md
+          rm README.md.bak
+
+      - name: Commit Changes
+        if: steps.parse.outputs.invalid != 'true'
+        run: |
+          git config user.name "canvas-bot"
+          git config user.email "actions@github.com"
+          git add map.svg history.log README.md
+          git commit -m "Paint ${{ steps.parse.outputs.coord }} ${{ steps.parse.outputs.color }}" || echo "No changes to commit"
+          git push
+
+      - name: Comment Success
+        if: steps.parse.outputs.invalid != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} \
+            --body "🎨 Successfully painted **${{ steps.parse.outputs.coord }}** with **${{ steps.parse.outputs.color }}**."
+
+          gh issue edit ${{ github.event.issue.number }} --add-label "Completed"
