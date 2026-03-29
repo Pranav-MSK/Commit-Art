@@ -1,5 +1,5 @@
 name: 🎨 Paint a Pixel
-description: Paint a pixel on the Global Rorschach Canvas
+description: Paint a pixel on the canvas
 title: "Paint [A1] #FFFFFF"
 labels: []
 
@@ -9,33 +9,20 @@ body:
       value: |
         ## 🎨 Paint the Canvas
 
-        Use the correct format below.
+        Just edit the **title** above and submit.
 
-        **Format:**
-        Paint [A5] #HEX
+        ### Format:
+        Paint [A5] #FF5733
 
-        ---
-        Valid:
+        ### Rules:
         - Rows: A–H
         - Columns: 1–8
-        - HEX: 6-digit color code
+        - HEX: 6-digit color
 
-  - type: input
-    id: instruction
-    attributes:
-      label: Paint Command
-      description: Enter your paint command exactly
-      placeholder: Paint [A5] #FF5733
-    validations:
-      required: true
-
-  - type: markdown
-    attributes:
-      value: |
-        ⚠️ The system only reads the **issue title**, not this field.
-
-        Make sure your **title** is correct before submitting.
+        ### Examples:
+        - Paint [C3] #00FFAA
+        - Paint [H8] #FF0000
 
         ---
-        Example:
-        Title → Paint [C3] #00FFAA
+
+        ⚠️ Only the **issue title** is processed.
