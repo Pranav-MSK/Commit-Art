@@ -4,32 +4,10 @@ title: "Paint [A1] #FFFFFF"
 labels: []
 
 body:
-  - type: markdown
+  - type: input
+    id: note
     attributes:
       label: Optional message
       placeholder: (optional)
-      value: |
-        ## 🎨 Paint the Canvas
-
-        Just edit the **title** above and submit.
-
-        ### Format:
-        Paint [A5] #FF5733
-
-        ### Rules:
-        - Rows: A–H
-        - Columns: 1–8
-        - HEX: 6-digit color
-
-        ### Examples:
-        - Paint [C3] #00FFAA
-        - Paint [H8] #FF0000
-
-        ---
-
-        ⚠️ Only the **issue title** is processed.
-
-      
     validations:
-    required: false
-      
+      required: false
