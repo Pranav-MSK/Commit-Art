@@ -6,6 +6,8 @@ labels: []
 body:
   - type: markdown
     attributes:
+      label: Optional message
+      placeholder: (optional)
       value: |
         ## 🎨 Paint the Canvas
 
@@ -26,3 +28,8 @@ body:
         ---
 
         ⚠️ Only the **issue title** is processed.
+
+      
+    validations:
+    required: false
+      
