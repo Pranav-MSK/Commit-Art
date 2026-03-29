@@ -60,7 +60,8 @@ jobs:
           fi
 
           # Update SVG
-          sed -i "s/id=\"$COORD\" fill=\"[^\"]*\"/id=\"$COORD\" fill=\"$COLOR\"/" map.svg
+          sed -i "/id=\"$COORD\"/s/fill=\"#[A-Fa-f0-9]\{6\}\"/fill=\"$COLOR\"/" map.svg
+          grep "$COORD" map.svg
 
           # Update state
           NEW_USER_COOLDOWN=$((NOW + 86400))
