@@ -18,6 +18,9 @@ jobs:
       - name: Install jq
         run: sudo apt-get install jq
 
+      - name: Install GitHub CLI
+        run: sudo apt-get install gh -y
+
       - name: Authenticate gh
         run: echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
 
@@ -44,7 +47,7 @@ jobs:
           COLOR=$(echo "$ISSUE_BODY" | sed -E 's/^Paint \[[A-H][1-8]\] (#.*)/\1/')
 
           # Load state
-          STATE=$(cat data/state.json)
+          STATE=$(cat data/state.json || echo '{}')
 
           USER_COOLDOWN=$(echo $STATE | jq -r ".users[\"$USERNAME\"] // 0")
           TILE_LOCK=$(echo "$STATE" | jq -r ".tiles[\"$COORD\"]?.lock_until // 0")
@@ -101,6 +104,6 @@ jobs:
           git commit -m "🎨 $USERNAME painted $COORD $COLOR"
           git push
 
-          ggh issue comment $ISSUE_NUMBER --body "✅ Painted $COORD $COLOR"
+          gh issue comment $ISSUE_NUMBER --body "✅ Painted $COORD $COLOR"
           gh issue edit $ISSUE_NUMBER --add-label "Completed"
           gh issue close $ISSUE_NUMBER --comment "🎨 Action complete."
