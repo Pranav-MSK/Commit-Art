@@ -3,7 +3,7 @@ Turn GitHub into a multiplayer canvas. Let the chaos unfold.
 
 Paint a pixel by opening an issue.
 
-Click → Submit → Done 👉 [Paint a random pixel](../../issues/new?title=Paint%20[A1]%20%23FFFFFF)
+Click → Submit → Done 👉 [Paint a random pixel](../../issues/new?template=paint.yml)
 
 ---
 
