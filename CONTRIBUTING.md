@@ -1,6 +1,6 @@
 # Contributing to Commit-Art
 
-Commit-Art powers **The Global Rorschach Canvas** — a collaborative 8×8 pixel grid driven entirely by GitHub Issues and GitHub Actions.
+**Issue-Ink** — a collaborative 8×8 pixel grid driven entirely by GitHub Issues and GitHub Actions.
 
 Every commit is a brushstroke.
 
