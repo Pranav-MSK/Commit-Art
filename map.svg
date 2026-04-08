@@ -68,7 +68,7 @@
     <rect id="E5" class="pixel" x="160" y="160" width="40" height="40" fill="#3333FF"/>
     <rect id="E6" class="pixel" x="200" y="160" width="40" height="40" fill="#CCCCCC"/>
     <rect id="E7" class="pixel" x="240" y="160" width="40" height="40" fill="#CCCCCC"/>
-    <rect id="E8" class="pixel" x="280" y="160" width="40" height="40" fill="#CCCCCC"/>
+    <rect id="E8" class="pixel" x="280" y="160" width="40" height="40" fill="#D64550"/>
   </g>
 
   <!-- Row F -->
