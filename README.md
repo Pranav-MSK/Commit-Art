@@ -1,4 +1,5 @@
 # 🎨 Issue-Ink  
+### Built with GitHub Issues + GitHub Actions
 **A GitHub-native, multiplayer pixel canvas powered entirely by Issues and Actions.**
 
 Turn a repository into a living, collaborative artwork—where every contribution is a commit, and every pixel tells a story.
@@ -115,3 +116,9 @@ Paint something meaningful.
 Or don’t.
 
 👉 **[Start painting](../../issues/new?template=paint.yml)**
+
+---
+
+## 📬 Support
+
+For questions or issues, contact: pranavmskrishnan@gmail.com
