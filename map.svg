@@ -97,7 +97,7 @@
 
   <!-- Row H -->
   <g id="row-H">
-    <rect id="H1" class="pixel" x="0"   y="280" width="40" height="40" fill="#CCCCCC"/>
+    <rect id="H1" class="pixel" x="0"   y="280" width="40" height="40" fill="#800080"/>
     <rect id="H2" class="pixel" x="40"  y="280" width="40" height="40" fill="#CCCCCC"/>
     <rect id="H3" class="pixel" x="80"  y="280" width="40" height="40" fill="#CCCCCC"/>
     <rect id="H4" class="pixel" x="120" y="280" width="40" height="40" fill="#CCCCCC"/>
