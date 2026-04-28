@@ -101,7 +101,7 @@
     <rect id="H2" class="pixel" x="40"  y="280" width="40" height="40" fill="#CCCCCC"/>
     <rect id="H3" class="pixel" x="80"  y="280" width="40" height="40" fill="#CCCCCC"/>
     <rect id="H4" class="pixel" x="120" y="280" width="40" height="40" fill="#CCCCCC"/>
-    <rect id="H5" class="pixel" x="160" y="280" width="40" height="40" fill="#CCCCCC"/>
+    <rect id="H5" class="pixel" x="160" y="280" width="40" height="40" fill="#DA70D6"/>
     <rect id="H6" class="pixel" x="200" y="280" width="40" height="40" fill="#CCCCCC"/>
     <rect id="H7" class="pixel" x="240" y="280" width="40" height="40" fill="#CCCCCC"/>
     <rect id="H8" class="pixel" x="280" y="280" width="40" height="40" fill="#CCCCCC"/>
