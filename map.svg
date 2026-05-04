@@ -75,7 +75,7 @@
   <g id="row-F">
     <rect id="F1" class="pixel" x="0"   y="200" width="40" height="40" fill="#CCCCCC"/>
     <rect id="F2" class="pixel" x="40"  y="200" width="40" height="40" fill="#CCCCCC"/>
-    <rect id="F3" class="pixel" x="80"  y="200" width="40" height="40" fill="#CCCCCC"/>
+    <rect id="F3" class="pixel" x="80"  y="200" width="40" height="40" fill="#7ECC49"/>
     <rect id="F4" class="pixel" x="120" y="200" width="40" height="40" fill="#CCCCCC"/>
     <rect id="F5" class="pixel" x="160" y="200" width="40" height="40" fill="#CCCCCC"/>
     <rect id="F6" class="pixel" x="200" y="200" width="40" height="40" fill="#CCCCCC"/>
