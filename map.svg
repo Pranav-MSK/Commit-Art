@@ -15,7 +15,7 @@
   <g id="row-A">
     <rect id="A1" class="pixel" x="0"   y="0" width="40" height="40" fill="#00CCFF"/>
     <rect id="A2" class="pixel" x="40"  y="0" width="40" height="40" fill="#CCCCCC"/>
-    <rect id="A3" class="pixel" x="80"  y="0" width="40" height="40" fill="#CCCCCC"/>
+    <rect id="A3" class="pixel" x="80"  y="0" width="40" height="40" fill="#E044A7"/>
     <rect id="A4" class="pixel" x="120" y="0" width="40" height="40" fill="#CCCCCC"/>
     <rect id="A5" class="pixel" x="160" y="0" width="40" height="40" fill="#FFD872"/>
     <rect id="A6" class="pixel" x="200" y="0" width="40" height="40" fill="#CCCCCC"/>
