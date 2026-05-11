@@ -26,7 +26,7 @@
   <!-- Row B -->
   <g id="row-B">
     <rect id="B1" class="pixel" x="0"   y="40" width="40" height="40" fill="#CCCCCC"/>
-    <rect id="B2" class="pixel" x="40"  y="40" width="40" height="40" fill="#CCCCCC"/>
+    <rect id="B2" class="pixel" x="40"  y="40" width="40" height="40" fill="#FFEC59"/>
     <rect id="B3" class="pixel" x="80"  y="40" width="40" height="40" fill="#CCCCCC"/>
     <rect id="B4" class="pixel" x="120" y="40" width="40" height="40" fill="#CCCCCC"/>
     <rect id="B5" class="pixel" x="160" y="40" width="40" height="40" fill="#CCCCCC"/>
