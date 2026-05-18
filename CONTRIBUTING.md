@@ -1,4 +1,4 @@
-# Contributing to Commit-Art
+# Contributing to Issue-Ink
 
 **Issue-Ink** — a collaborative 8×8 pixel grid driven entirely by GitHub Issues and GitHub Actions.
 
@@ -58,7 +58,7 @@ This is a slow system by design.
 
 # 🧠 Philosophy
 
-Commit-Art is a behavioral experiment.
+Issue-Ink is a behavioral experiment.
 
 The canvas is:
 
