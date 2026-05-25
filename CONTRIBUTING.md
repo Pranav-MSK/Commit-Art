@@ -1,213 +1,104 @@
-# Contributing to Issue-Ink
+# 🎨 Contributing to Issue-Ink
 
-**Issue-Ink** — a collaborative 8×8 pixel grid driven entirely by GitHub Issues and GitHub Actions.
+> **The Core Principle:** Input → Mutation → Public Record. If your contribution preserves this loop and keeps the system simple, it’s welcome. If it tries to transform Issue-Ink into a traditional web app, it will be rejected.
 
-Every commit is a brushstroke.
-
-This document explains:
-
-- How to participate
-- How the engine works
-- What enhancements are welcome
-- What changes will likely be rejected
+`Issue-Ink` is a collaborative 8×8 pixel grid driven entirely by GitHub Issues and GitHub Actions. Here, every commit is a brushstroke. 
 
 ---
 
-# 🎨 Painting the Canvas
+## 🖌 How to Paint (For Users)
 
-Anyone can paint.
+Anyone can participate in this experiment. To paint a pixel, you don't need to write code—you just need to open an issue.
 
-## How to Paint
+### The Input Format
+1. Open the **Issues** tab and click **New Issue**.
+2. Use this exact format for the title: `Paint [Coordinate] #HexCode`
 
-1. Open the **Issues** tab.
-2. Click **New Issue**.
-3. Use this exact format in the **title**:
+### Valid Parameters
+
+| Parameter | Allowed Values | Examples |
+| :--- | :--- | :--- |
+| **Rows** | `A` through `H` | `Paint [A1] #FF0000` |
+| **Columns** | `1` through `8` | `Paint [B5] #00FFAA` |
+| **Color** | 6-digit HEX code | `Paint [H8] #FFFFFF` |
+
+### ⏳ The Game Rules
+* 🕒 **Rate Limit:** One paint per user every 24 hours.
+* 🔒 **Territory Lock:** A newly painted tile is locked for 1 hour.
+* 🤖 **No Automation:** Do not script or spam the painting process. This system is slow by design.
+* ❌ **Validation:** Invalid formats automatically receive the `Invalid` label. Successful paints receive the `Completed` label.
+
+---
+
+## 🧠 Project Philosophy
+
+Issue-Ink is a behavioral experiment. The canvas is **open, mutable, conflict-driven, and emergent.** To maintain the purity of the experiment, we intentionally avoid:
+* Complex external UIs or web frontends.
+* Hidden backend logic or centralized moderation algorithms.
+* Off-platform state storage (databases/servers).
+
+**GitHub is the engine. Transparency is the absolute rule.**
+
+---
+
+## 🛠 Engineering & Code Contributions
+
+We welcome engine enhancements, provided they respect our architectural boundaries.
+
+### Architecture Overview
+```
+[Issue Opened] ➔ [GitHub Action Parses Title] ➔ [Validates Rules] ➔ [Mutates map.svg & state.json] ➔ [Commits to Main]
 
 ```
-Paint [A5] #FF5733
-```
 
-## Valid Inputs
+* **State Storage:** `data/state.json` holds the current canvas values.
+* **Canvas Render:** `map.svg` represents the live visual state.
+* **Ledger:** The Git commit history serves as our immutable public record.
 
-- Rows: **A–H**
-- Columns: **1–8**
-- Color: **6-digit HEX code**
+### 🚀 High-Priority Enhancement Ideas
 
-Examples:
+We are actively looking for contributions in the following areas:
 
-- `Paint [A1] #FF0000`
-- `Paint [H8] #00FFAA`
+#### 1. Stability & Edge Cases
+* More robust input validation and syntax parsing.
+* Enhanced edge-case handling for simultaneous issue submissions (race conditions).
+* Improved cache-busting logic for the README SVG display.
 
----
+#### 2. Experimental Mechanics (Must be minimal)
+* **Soft Pixel Decay:** Gradually fading colors after prolonged inactivity.
+* **Contested Tiles:** Logic to track and display the most fought-over coordinates.
+* **Controlled Expansion:** Expanding the grid (e.g., to 10×10) only after specific global milestones are met.
 
-# ⏳ Game Rules
-
-- 🕒 One paint per user every **24 hours**
-- 🔒 A painted tile is locked for **1 hour**
-- Format must match exactly
-- Invalid format → Issue labeled `Invalid`
-- Successful paint → Issue labeled `Completed`
-- Every action is permanently stored in `data/state.json`
-- SVG (`map.svg`) represents the live canvas state
-
-Do not automate or spam painting.
-
-This is a slow system by design.
+#### 3. Observability
+* Auto-generating a lightweight leaderboard or "Total Paints" counter inside the README.
+* *Note: All metrics must live inside the repository. No external dashboards.*
 
 ---
 
-# 🧠 Philosophy
+## ❌ What Will Be Rejected
 
-Issue-Ink is a behavioral experiment.
-
-The canvas is:
-
-- Open
-- Mutable
-- Conflict-driven
-- Emergent
-
-We intentionally avoid:
-
-- Complex UI
-- Hidden backend logic
-- Centralized moderation algorithms
-- Off-platform state storage
-
-GitHub is the engine.
-
-Transparency is the rule.
+The constraints of this project are the point. We will automatically decline Pull Requests that attempt to introduce:
+* 🛑 Backend servers (Node, Python APIs, etc.)
+* 🛑 External databases (MongoDB, PostgreSQL, Firebase, etc.)
+* 🛑 Third-party authentication systems.
+* 🛑 Alternatives to GitHub Actions.
 
 ---
 
-# 🛠 Code Contributions
+## 📦 How to Submit a Change
 
-Contributions to the engine are welcome — but must respect the core philosophy.
-
-## Architecture Overview
-
-- Issue Title → Parsed by GitHub Action
-- Workflow validates format and rules
-- SVG (`map.svg`) is mutated
-- Persistent state stored in `data/state.json`
-- Commit history is the public ledger
-
-Everything must remain:
-
-- Deterministic
-- Serverless
-- GitHub-native
+1. **Fork** the repository and create your feature branch.
+2. Keep your commits **small, atomic, and well-documented**.
+3. Open a Pull Request clearly explaining:
+   * What changed.
+   * Why it improves the system.
+   * How it strictly adheres to the project philosophy.
 
 ---
 
-# 🚀 Enhancement Ideas
+## 🛡 Moderation & Behavior
 
-Enhancements should improve one of these areas:
-
----
-
-## 1️⃣ Stability Improvements
-
-- More robust input validation
-- Edge case handling
-- Improved cooldown calculations
-- Improved lock safety
-- Better cache-busting for SVG
-- State integrity verification
+While this is an open, conflict-driven experiment, harassment, hate symbols, explicit content, or coordinated malicious abuse will be reverted, and offending users will be blocked. The maintainer retains final decision authority.
 
 ---
-
-## 2️⃣ Game Mechanics (Carefully Considered)
-
-Potential future mechanics:
-
-- Tile ownership (consecutive paints)
-- Most contested tile tracking
-- Daily paint counters
-- Soft pixel decay after inactivity
-- Controlled canvas expansion (e.g., 10×10 after X paints)
-
-Mechanics must:
-- Be minimal
-- Preserve simplicity
-- Avoid turning the system into a complex app
-
----
-
-## 3️⃣ Observability & Transparency
-
-- Auto-generated stats section in README
-- Lightweight leaderboard
-- Total paints counter
-- Timestamp display improvements
-
-No external dashboards.
-
-All metrics must live inside the repository.
-
----
-
-## 4️⃣ Anti-Abuse Improvements
-
-- Basic spam resistance
-- Pattern abuse detection
-- Safer automation guardrails
-
-Must remain lightweight and transparent.
-
----
-
-# ❌ Changes Likely to Be Rejected
-
-- Adding a backend server
-- Adding a database
-- Replacing GitHub Actions
-- Adding a web frontend
-- Introducing complex authentication systems
-- Overengineering the canvas
-
-The constraint *is the point*.
-
----
-
-# 📦 How to Submit Code Changes
-
-1. Fork the repository.
-2. Create a feature branch.
-3. Keep commits small and atomic.
-4. Clearly explain:
-   - What changed
-   - Why it improves the system
-   - How it preserves philosophy
-5. Submit a Pull Request.
-
-PRs that dramatically increase complexity will likely be declined.
-
----
-
-# 🛡 Moderation
-
-This is an open experiment, but:
-
-- Harassment
-- Hate symbols
-- Explicit content
-- Coordinated abuse
-
-may be reverted or blocked.
-
-The maintainer retains final decision authority.
-
----
-
-# 🧩 The Core Principle
-
-Input → Mutation → Public Record
-
-If your contribution preserves this loop and keeps the system simple, it will likely be considered.
-
-If it tries to transform Commit-Art into a traditional web app, it will not.
-
----
-
-Build carefully.
+Built carefully. Played creatively. 🎨
