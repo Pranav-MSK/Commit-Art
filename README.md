@@ -1,4 +1,8 @@
 # 🎨 Issue-Ink  
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-powered-blue)
+![Serverless](https://img.shields.io/badge/serverless-GitHub-black)
+![Canvas](https://img.shields.io/badge/multiplayer-pixel%20canvas-purple)
+![Status](https://img.shields.io/badge/status-live-brightgreen)
 ### Built entirely on GitHub using Issues as input and GitHub Actions as the execution engine.
 
 Turn a repository into a living, collaborative artwork—where every contribution is a commit, and every pixel tells a story.
