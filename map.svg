@@ -86,7 +86,7 @@
   <!-- Row G -->
   <g id="row-G">
     <rect id="G1" class="pixel" x="0"   y="240" width="40" height="40" fill="#CCCCCC"/>
-    <rect id="G2" class="pixel" x="40"  y="240" width="40" height="40" fill="#CCCCCC"/>
+    <rect id="G2" class="pixel" x="40"  y="240" width="40" height="40" fill="#FFAF6E"/>
     <rect id="G3" class="pixel" x="80"  y="240" width="40" height="40" fill="#CCCCCC"/>
     <rect id="G4" class="pixel" x="120" y="240" width="40" height="40" fill="#CCCCCC"/>
     <rect id="G5" class="pixel" x="160" y="240" width="40" height="40" fill="#CCCCCC"/>
