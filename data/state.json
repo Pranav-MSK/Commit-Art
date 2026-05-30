@@ -1,6 +1,6 @@
 {
   "users": {
-    "Pranav-MSK": 1780068763
+    "Pranav-MSK": 1780249125
   },
   "tiles": {
     "D3": {
@@ -134,6 +134,12 @@
       "last_painted": 1779982363,
       "paint_count": 1,
       "lock_until": 1779985963
+    },
+    "E4": {
+      "last_user": "Pranav-MSK",
+      "last_painted": 1780162725,
+      "paint_count": 1,
+      "lock_until": 1780166325
     }
   },
   "history": [
@@ -274,6 +280,12 @@
       "coord": "G2",
       "color": "#FFAF6E",
       "timestamp": 1779982363
+    },
+    {
+      "user": "Pranav-MSK",
+      "coord": "E4",
+      "color": "#C05780",
+      "timestamp": 1780162725
     }
   ]
 }
