@@ -88,7 +88,7 @@
     <rect id="G1" class="pixel" x="0"   y="240" width="40" height="40" fill="#CCCCCC"/>
     <rect id="G2" class="pixel" x="40"  y="240" width="40" height="40" fill="#FFAF6E"/>
     <rect id="G3" class="pixel" x="80"  y="240" width="40" height="40" fill="#CCCCCC"/>
-    <rect id="G4" class="pixel" x="120" y="240" width="40" height="40" fill="#CCCCCC"/>
+    <rect id="G4" class="pixel" x="120" y="240" width="40" height="40" fill="#FFFF66"/>
     <rect id="G5" class="pixel" x="160" y="240" width="40" height="40" fill="#CCCCCC"/>
     <rect id="G6" class="pixel" x="200" y="240" width="40" height="40" fill="#CCCCCC"/>
     <rect id="G7" class="pixel" x="240" y="240" width="40" height="40" fill="#DC134C"/>
