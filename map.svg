@@ -50,7 +50,7 @@
   <!-- Row D -->
   <g id="row-D">
     <rect id="D1" class="pixel" x="0"   y="120" width="40" height="40" fill="#CCCCCC"/>
-    <rect id="D2" class="pixel" x="40"  y="120" width="40" height="40" fill="#CCCCCC"/>
+    <rect id="D2" class="pixel" x="40"  y="120" width="40" height="40" fill="#86CBB8"/>
     <rect id="D3" class="pixel" x="80"  y="120" width="40" height="40" fill="#CCCCCC"/>
     <rect id="D4" class="pixel" x="120" y="120" width="40" height="40" fill="#FAEBD7"/>
     <rect id="D5" class="pixel" x="160" y="120" width="40" height="40" fill="#E77577"/>
