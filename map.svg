@@ -55,7 +55,7 @@
     <rect id="D4" class="pixel" x="120" y="120" width="40" height="40" fill="#FAEBD7"/>
     <rect id="D5" class="pixel" x="160" y="120" width="40" height="40" fill="#E77577"/>
     <rect id="D6" class="pixel" x="200" y="120" width="40" height="40" fill="#CCCCCC"/>
-    <rect id="D7" class="pixel" x="240" y="120" width="40" height="40" fill="#CCCCCC"/>
+    <rect id="D7" class="pixel" x="240" y="120" width="40" height="40" fill="#5496A6"/>
     <rect id="D8" class="pixel" x="280" y="120" width="40" height="40" fill="#CCCCCC"/>
   </g>
 
