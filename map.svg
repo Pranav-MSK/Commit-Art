@@ -63,7 +63,7 @@
   <g id="row-E">
     <rect id="E1" class="pixel" x="0"   y="160" width="40" height="40" fill="#00B496"/>
     <rect id="E2" class="pixel" x="40"  y="160" width="40" height="40" fill="#CCCCCC"/>
-    <rect id="E3" class="pixel" x="80"  y="160" width="40" height="40" fill="#CCCCCC"/>
+    <rect id="E3" class="pixel" x="80"  y="160" width="40" height="40" fill="#692248"/>
     <rect id="E4" class="pixel" x="120" y="160" width="40" height="40" fill="#C05780"/>
     <rect id="E5" class="pixel" x="160" y="160" width="40" height="40" fill="#3333FF"/>
     <rect id="E6" class="pixel" x="200" y="160" width="40" height="40" fill="#3ADFFF"/>
